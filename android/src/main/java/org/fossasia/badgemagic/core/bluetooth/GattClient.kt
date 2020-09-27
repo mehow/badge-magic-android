@@ -10,6 +10,7 @@ import android.content.Context
 import android.content.Context.BLUETOOTH_SERVICE
 import java.util.LinkedList
 import org.fossasia.badgemagic.core.android.log.Timber
+import org.fossasia.badgemagic.data.DataToSend
 import org.fossasia.badgemagic.util.BadgeUtils
 import org.fossasia.badgemagic.utils.ByteArrayUtils
 import org.koin.core.KoinComponent
@@ -54,6 +55,10 @@ class GattClient : KoinComponent {
             Thread.sleep(100)
             writeNextData()
         }
+    }
+
+    fun convert(data: DataToSend): List<ByteArray> {
+        return badgeUtils.currentDevice.convert(data)
     }
 
     fun writeDataStart(byteData: List<ByteArray>, onFinishWritingDataListener: () -> Unit) {

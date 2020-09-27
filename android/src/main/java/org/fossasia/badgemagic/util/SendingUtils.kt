@@ -11,7 +11,6 @@ import org.fossasia.badgemagic.data.DataToSend
 import org.fossasia.badgemagic.data.Message
 import org.fossasia.badgemagic.data.Mode
 import org.fossasia.badgemagic.data.Speed
-import org.fossasia.badgemagic.device.DataToByteArrayConverter
 import org.fossasia.badgemagic.helpers.JSONHelper
 import org.fossasia.badgemagic.utils.ByteArrayUtils
 
@@ -22,7 +21,7 @@ object SendingUtils {
 
     fun sendMessage(context: Context, dataToSend: DataToSend) {
         Timber.i { "About to send org.fossasia.badgemagic.data: $dataToSend" }
-        val byteData = DataToByteArrayConverter.convert(dataToSend)
+        val byteData = gattClient.convert(dataToSend)
         sendBytes(context, byteData)
     }
 
