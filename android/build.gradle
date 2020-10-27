@@ -1,5 +1,5 @@
 plugins {
-    id "com.diffplug.spotless" version "5.6.1"
+    id "com.diffplug.spotless" version "5.7.0"
 }
 apply plugin: "com.github.b3er.local.properties"
 apply plugin: 'com.android.application'
@@ -95,7 +95,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
 
     // Koin AndroidX
     implementation "org.koin:koin-androidx-viewmodel:${versions.koin_version}"
@@ -109,9 +109,9 @@ dependencies {
     implementation 'no.nordicsemi.android.support.v18:scanner:1.4.3'
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    testImplementation 'junit:junit:4.13'
+    testImplementation 'junit:junit:4.13.1'
     testImplementation 'com.nhaarman:mockito-kotlin-kt1.1:1.5.0'
-    testImplementation 'org.amshove.kluent:kluent:1.61'
+    testImplementation 'org.amshove.kluent:kluent:1.63'
 
     // Leak Canary
     debugImplementation "com.squareup.leakcanary:leakcanary-android:${versions.leak_canary}"
