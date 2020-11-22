@@ -118,4 +118,7 @@ dependencies {
 
     //Display third party licenses
     implementation 'de.psdev.licensesdialog:licensesdialog:2.1.0'
+
+    //Tasker
+    implementation 'com.joaomgcd:taskerpluginlibrary:0.3.3'
 }

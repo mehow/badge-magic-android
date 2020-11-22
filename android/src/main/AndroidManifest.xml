@@ -16,6 +16,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
     <application
         android:name=".BadgeMagicApp"
         android:allowBackup="true"
@@ -49,6 +51,26 @@
         </activity>
         <activity android:name=".ui.EditBadgeActivity" android:screenOrientation="landscape"/>
         <activity android:name=".ui.EditClipartActivity" android:screenOrientation="landscape"/>
+        <activity
+            android:name=".ui.TaskerActionActivity"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Badge Magic">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_SETTING" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.TaskerStateActivity"
+            android:exported="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="Smart Badge connected">
+            <intent-filter>
+                <action android:name="com.twofortyfouram.locale.intent.action.EDIT_CONDITION" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".tasker.Service" android:exported="false" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

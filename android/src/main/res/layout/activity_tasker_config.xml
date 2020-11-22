@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Text" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Text"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Mode" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioFixed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fixed" />
+
+        <RadioButton
+            android:id="@+id/radioLeftToRight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Left to right" />
+
+        <RadioButton
+            android:id="@+id/radioRightToLeft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Right to left" />
+
+        <RadioButton
+            android:id="@+id/radioBlink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blink" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Speed" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioSlow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Slow" />
+
+        <RadioButton
+            android:id="@+id/radioNormal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Normal" />
+
+        <RadioButton
+            android:id="@+id/radioFast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fast" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Connect" />
+
+</LinearLayout>
